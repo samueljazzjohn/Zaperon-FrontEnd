@@ -26,7 +26,7 @@ const MainPage = () => {
                 <div className='h-[200px] w-[200px] bg-[#EFEFEF] rounded-full flex justify-center items-center mx-auto'>
                     <img className='h-[100px] w-[100px]' src={user} alt=""  />
                 </div>
-                <Typography className='text-[20px] items-center mx-auto font-[600]' variant="h2" component="h2">Welcome!</Typography><Typography mt={1} className='text-[20px] items-center mx-auto text-[#0B3558]' variant="body1" component="p">Let's connect to your workspace</Typography>
+                <Typography className='text-[20px] text-[#0B3558] items-center mx-auto font-[600]' variant="h2" component="h2">Welcome!</Typography><Typography mt={1} className='text-[20px] items-center mx-auto text-[#0B3558]' variant="body1" component="p">Let's connect to your workspace</Typography>
                 <Typography mt={1} className='text-[20px] items-center mx-auto text-[#0B3558]' variant="body1" component="p">Please enter your email to continue</Typography><Login />
             </Box>
             <div className='w-full statice bottom-0 flex flex-row justify-center md:justify-between px-5 py-1'>

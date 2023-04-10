@@ -57,7 +57,7 @@ const HomePage = () => {
                     <img className='h-[100px] w-[100px]' src={user} alt="" />
                 </div>
                 
-                <Typography className='text-[20px] items-center mx-auto font-[600]' variant="h2" component="h2">Welcome {localStorage.getItem('username')}</Typography>
+                <Typography className='text-[20px] text-[#0B3558] items-center mx-auto font-[600]' variant="h2" component="h2">Welcome {localStorage.getItem('username')}</Typography>
             </Box>
             <div className='w-full statice bottom-0 flex flex-row justify-between px-5 py-1'>
                 <div className='flex flex-row justify-start space-x-2'>

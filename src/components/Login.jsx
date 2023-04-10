@@ -101,7 +101,7 @@ const Login = () => {
                 <TextField type='email' className={classes.TextField} {...register('email',)} id="outlined-basic" label="Email Address" variant="outlined" InputProps={{
                     endAdornment: (
                         <InputAdornment position="end">
-                            <div className='h-8 w-8 rounded-full bg-yellow-200 hover:bg-[#003FB9] hover:text-white cursor-pointer flex justify-center items-center'>1</div>
+                            <div className='h-8 w-8 rounded-full bg-yellow-500 hover:bg-[#003FB9] hover:text-white cursor-pointer flex justify-center items-center'>1</div>
                         </InputAdornment>
                     ),
                 }} error={errorEmail} helperText={errorEmail ? "Please enter email address" : ""} />
@@ -124,7 +124,7 @@ const Login = () => {
                 >
                 </LoadingButton> :
                     <Button className={classes.button} type='submit' variant="text">  <Typography className='font-sans' variant="h6" style={{textTransform: 'none'}}>Sign In</Typography>
-                            <div className='h-8 w-8 rounded-full bg-yellow-200 hover:bg-[#02318E] text-black hover:text-[#02318E] cursor-pointer flex justify-center items-center translate-x-48'>1</div>
+                            <div className='h-8 w-8 rounded-full bg-yellow-500 hover:bg-[#02318E] text-white hover:text-[#02318E] cursor-pointer flex justify-center items-center translate-x-48'>2</div>
 
                     </Button>
                 }
