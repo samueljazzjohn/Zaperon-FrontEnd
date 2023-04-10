@@ -60,6 +60,7 @@ const Login = () => {
             setErrorEmail(true)
             setLoading(false)
         } else if (data.password.length < 8) {
+            setErrorEmail(false)
             setErrorPassword(true)
             setLoading(false)
         } else {
@@ -76,6 +77,7 @@ const Login = () => {
                 navigate('/home')
             }).catch((err) => {
                 console.log(err.message)
+                setLoading(false)
                 if(err.request.status==500){
                     toast.error("Please make sure that you have proper network");
                 }else if(err.request.status==401){
@@ -95,7 +97,7 @@ const Login = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit(onSubmit)} className='mt-2 flex flex-col justify-center items-center w-full space-y-8'>
+            <form onSubmit={handleSubmit(onSubmit)} className='mt-2 flex flex-col justify-center items-center w-full space-y-5'>
                 <TextField type='email' className={classes.TextField} {...register('email',)} id="outlined-basic" label="Email Address" variant="outlined" InputProps={{
                     endAdornment: (
                         <InputAdornment position="end">
@@ -110,6 +112,7 @@ const Login = () => {
                         </InputAdornment>
                     ),
                 }} error={errorPassword} helperText={errorPassword ? "Password must be 8 charancter long" : ""} />
+                 <Typography className='text-[#003FB9] right-0 translate-x-44' variant="body1" component="body1">Forgot Password?</Typography>
                 {loading ? <LoadingButton className='w-[500px] h-[55px] text-white' style={{ background: '#003FB9', color: "white" }}
                     loading
                     sx={{
@@ -120,7 +123,9 @@ const Login = () => {
                     }}
                 >
                 </LoadingButton> :
-                    <Button className={classes.button} type='submit' variant="contained">Sign In
+                    <Button className={classes.button} type='submit' variant="text">  <Typography className='font-sans' variant="h6" style={{textTransform: 'none'}}>Sign In</Typography>
+                            <div className='h-8 w-8 rounded-full bg-yellow-200 hover:bg-[#02318E] text-black hover:text-[#02318E] cursor-pointer flex justify-center items-center translate-x-48'>1</div>
+
                     </Button>
                 }
 

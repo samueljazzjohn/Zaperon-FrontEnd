@@ -22,7 +22,7 @@ const HomePage = () => {
         setToken(localStorage.getItem('token')) 
 
         if (!localStorage.getItem('isLoggedIn')) {
-            navigate('/login')
+            navigate('/')
         }
 
         // call API every 10 seconds
@@ -42,7 +42,7 @@ const HomePage = () => {
             if(err.request.status===401){
                 localStorage.clear()
                 toast.error("Session Expired")
-                navigate('/login')
+                navigate('/')
             }
         })
     };
