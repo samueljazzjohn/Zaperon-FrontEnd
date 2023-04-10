@@ -77,7 +77,13 @@ const Login = () => {
             }).catch((err) => {
                 console.log(err.message)
                 if(err.request.status==500){
-                    toast.error("Please make sure that you have proper network")
+                    toast.error("Please make sure that you have proper network");
+                }else if(err.request.status==401){
+                    toast.error("Invalid credentials");
+                }else if(err.request.status==403){
+                    toast.error("Please enter valid password");
+                }else{
+                    toast.error("Server error")
                 }
             })
         }
